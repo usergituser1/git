@@ -39,20 +39,15 @@ int partition(int left, int right, int pivot) {
 
    while(true) {
       while(intArray[++leftPointer] < pivot) {
-         //do nothing
-      }
+      /*do nothing*/}
 
       while(rightPointer > 0 && intArray[--rightPointer] > pivot) {
-         //do nothing
-      }
+         /*do nothing*/}
 
       if(leftPointer >= rightPointer) {
-         break;
-      } else {
+         break;} else {
          printf(" item swapped :%d,%d\n", intArray[leftPointer],intArray[rightPointer]);
-         swap(leftPointer,rightPointer);
-      }
-   }
+         swap(leftPointer,rightPointer);}}
 
    printf(" pivot swapped :%d,%d\n", intArray[leftPointer],intArray[right]);
    swap(leftPointer,right);

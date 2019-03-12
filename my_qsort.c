@@ -2,24 +2,52 @@
 #include <stdlib.h>
 
 #define SIZE 3
+
+//---defining a macro-- still under study---
+/*
 #define swap(a,b) a=a^b;\
                   b=a^b;\
                   a=b^a;
-
+*/
 /*partition for qsort*/
-
+void swap(int n1, int n2);
+void swap(int n1, int n2){
+      int temp = int arr[n1];
+      int arr[n1] = arr[n2];
+      int arr[n2] = tmp;};
 
 int partition(int arr[],int low,int high);
 int partition(int arr[],int low,int high){
+/*
         int pivot=arr[high];
+
         int i=(low-1), j;
+
         for (j=low;j<=high-1;j++){
                 if (arr[j]<=pivot) {
                     i++;
                     swap(arr[i],arr[j]);};};
                 swap(arr[i+1],arr[high]);
-                    return(i+1);};
+                    return(i+1);};*/
+            int leftPointer = low -1;
+            int rightPointer = high;
 
+            while(true) {
+                 while(intArray[++leftPointer] < pivot) {
+                 /*do nothi*/}
+
+                       while(rightPointer > 0 && intArray[--rightPointer] > pivot) {
+                          /*do nothing*/}
+
+                       if(leftPointer >= rightPointer) {
+                          break;} else {
+                          printf(" item swapped :%d,%d\n", intArray[leftPointer],intArray[rightPointer]);
+                          swap(leftPointer,rightPointer);}}
+                          printf(" pivot swapped :%d,%d\n", intArray[leftPointer],intArray[right]);
+                          swap(leftPointer,right);
+                          printf("Updated Array: ");
+                          display();
+                          return leftPointer;}
 
 void quicksort(int arr[],int low,int high);
 void quicksort(int arr[],int low,int high){
